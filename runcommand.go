@@ -11,6 +11,7 @@ import (
 func runCommand(input string) error {
 	errNoHomeFound := errors.New("cd: no directory specified, and the HOME directory is inaccessible")
 	input = strings.TrimSuffix(input, "\n")
+
 	// split cmd and args up
 	args := strings.Split(input, " ")
 
@@ -22,6 +23,7 @@ func runCommand(input string) error {
 		if err != nil {
 			return errors.New("fuck")
 		}
+		
 		homePath := usr.HomeDir
 
 		if len(args) < 2 {
@@ -31,6 +33,7 @@ func runCommand(input string) error {
 				return os.Chdir(homePath)
 			}
 		}
+
 		return os.Chdir(args[1])
 
 	case "exit", "quit", "close":
