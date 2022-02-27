@@ -1,0 +1,2 @@
+# ohmygosh
+shell in go
