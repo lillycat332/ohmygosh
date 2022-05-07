@@ -7,6 +7,6 @@ func motd() string {
 	//}
 	//
 	//conf
-	message := "welcome to wcmd 🏳️‍⚧️\n"
-	return message
+	//message := "welcome to wcmd 🏳️‍⚧️\n"
+	return ""
 }

@@ -24,7 +24,7 @@ func main() {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	
+
 	reader := bufio.NewReader(os.Stdin)
 	for {
 		fmt.Printf("%s $ ", username+"@"+hostname)
@@ -33,10 +33,11 @@ func main() {
 		if err != nil {
 			fmt.Fprintln(os.Stderr, err)
 		}
-		
+
 		// execute input
 		if err = runCommand(input); err != nil {
 			fmt.Fprintln(os.Stderr, err)
 		}
 	}
+
 }
